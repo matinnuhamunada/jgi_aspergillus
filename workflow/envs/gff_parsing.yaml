@@ -1,0 +1,10 @@
+name: gff_parsing
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - jupyterlab
+  - pandas
+  - biopython
+  - any2fasta

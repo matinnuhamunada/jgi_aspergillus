@@ -41,7 +41,7 @@ projects:
   - name: jgi_asp
     samples: config/jgi_asp/tables/samples.csv
     rules: config/jgi_asp/project_config.yaml
-    gtdb-tax: config/jgi_asp/tables/JGI_taxonomy.csv
+    gtdb-tax: config/jgi_asp/tables/JGI_taxonomy.tsv
 ``` 
 
 ### 5. Extract raw data

@@ -45,7 +45,7 @@ projects:
 ``` 
 
 ### 5. Extract raw data
-Extract all 4 of the zipped files to `BGCFlow data/raw/` directory (we can also create symlinks, or change the file paths in the `config/tables/units.csv`)
+Extract all 4 of the zipped files to `BGCFlow data/raw/` directory (we can also create symlinks, or change the file paths in the `config/jgi_asp/tables/units.csv`)
 
 ### 6. Run this sub-workflow
 Move to BGCflow directory and run snakemake with this parameters (better do a dry run first).
@@ -60,7 +60,7 @@ After all intermediate files in `interim/prokka/` has been generated, we need to
 ```bash
 snakemake --until prokka --touch -c $N -n #remove -n to run
 ```
-When all the intermediate data has been updated, we can run BGCFlow as usual:
+When all the intermediate data has been updated, we can run BGCFlow normally
 ```bash
 snakemake --use-conda -c $N -n #remove -n to run
 ```

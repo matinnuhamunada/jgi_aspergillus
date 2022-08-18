@@ -24,7 +24,7 @@ logging.basicConfig(format=log_format, datefmt=date_format, level=logging.DEBUG)
 
 
 
-def main(gff_file, fasta_file, outfile, molecule_type="DNA"):
+def main(gff_file, fasta_file, out_file, molecule_type="DNA"):
     #out_file = "%s.gb" % os.path.splitext(gff_file)[0]
     if fasta_file:
         fasta_input = SeqIO.to_dict(SeqIO.parse(fasta_file, "fasta"))

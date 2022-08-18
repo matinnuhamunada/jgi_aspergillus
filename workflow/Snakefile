@@ -1,9 +1,0 @@
-include: "rules/common.smk"
-
-##### Target rules #####
-rule all:
-    input:
-        expand('data/interim/prokka/{strains}/{strains}.gbk', strains=STRAINS)
-
-##### Modules #####
-include: "rules/gff_parsing.smk"

@@ -1,4 +1,4 @@
-strain,unit,assembly,annotations
+genome_id,unit,assembly,annotations
 1052020,1,data/raw/AspacrStandDraft_FD/Assembly/Mycocosm/Assembly/Assembled_scaffolds__masked_/Aspacri1_AssemblyScaffolds_Repeatmasked.fasta.gz,data/raw/AspacrStandDraft_FD/Annotation/Mycocosm/Annotation/Filtered_Models___best__/Genes/Aspacri1_GeneCatalog_20160412.gff3.gz
 1052338,1,data/raw/AspaffStandDraft_FD/Assembly/Mycocosm/Assembly/Assembled_scaffolds__masked_/Aspaff1_AssemblyScaffolds_Repeatmasked.fasta.gz,data/raw/AspaffStandDraft_FD/Annotation/Mycocosm/Annotation/Filtered_Models___best__/Genes/Aspaff1_GeneCatalog_20181129.gff3.gz
 1052434,1,data/raw/AspalaStandDraft_FD/Assembly/Mycocosm/Assembly/Assembled_scaffolds__masked_/Aspala1_AssemblyScaffolds_Repeatmasked.fasta.gz,data/raw/AspalaStandDraft_FD/Annotation/Mycocosm/Annotation/Filtered_Models___best__/Genes/Aspala1_GeneCatalog_20160910.gff3.gz

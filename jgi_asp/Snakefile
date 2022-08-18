@@ -9,16 +9,13 @@ min_version("6.15.1")
 ##### load config and sample sheets #####
 
 configfile: "config/config.yaml"
-#validate(config, schema="../schemas/config.schema.yaml")
 
 # set up sample
-samples = pd.read_csv(config["samples"], dtype=object).set_index("strain", drop=False)
-samples.index.names = ["strain_id"]
-#validate(samples, schema="../schemas/samples.schema.yaml")
+samples = pd.read_csv(config["samples"], dtype=object).set_index("genome_id", drop=False)
+samples.index.names = ["genome_id"]
 
 # set up units
-units = pd.read_csv(config["units"], dtype=object).set_index("strain", drop=False)
-#validate(units, schema="../schemas/units.schema.yaml")
+units = pd.read_csv(config["units"], dtype=object).set_index("genome_id", drop=False)
 
 ##### Wildcard constraints #####
 wildcard_constraints:
@@ -27,6 +24,14 @@ wildcard_constraints:
 
 ##### Helper functions #####
 
-STRAINS = samples.strain.to_list()
+STRAINS = samples.genome_id.to_list()
 GFF = {k: v for (k,v) in units.annotations.to_dict().items()}
 FNA = {k: v for (k,v) in units.assembly.to_dict().items()}
+
+##### Target rules #####
+rule all:
+    input:
+        expand('data/interim/prokka/{strains}/{strains}.gbk', strains=STRAINS)
+
+##### Modules #####
+include: "rules/gff_parsing.smk"
